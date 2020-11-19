@@ -9,37 +9,10 @@ use AndrewSvirin\Interview\Adapters\PostgresAdapter;
 use AndrewSvirin\Interview\Builders\OutputBuilder;
 use AndrewSvirin\Interview\Factories\DBAdapterFactory;
 use AndrewSvirin\Interview\Services\APIClient;
-use AndrewSvirin\Interview\Services\DBClient;
 use AndrewSvirin\Interview\Requests\Feedback\CreateFeedbackRequest;
-use InvalidArgumentException;
 
 class InterviewTest extends BaseTestCase
 {
-
-    /**
-     * Use default config or pass custom config for create client connection.
-     * @param array|null $config
-     * @return DBClient
-     */
-    private function client(array $config = null)
-    {
-        if (null === $config) {
-            $config = $this->config['database'];
-        }
-        if (!$config) {
-            throw new InvalidArgumentException('Configuration incorrect. Config has not section `database`.');
-        }
-
-        $dbAdapter = DBAdapterFactory::produce($config['driver'] ?? null);
-
-        return new DBClient($dbAdapter, [
-            'host' => $config['host'],
-            'name' => $config['name'],
-            'username' => $config['username'],
-            'password' => $config['password'],
-            'port' => $config['port'],
-        ]);
-    }
 
     /**
      * Create connection and check it.

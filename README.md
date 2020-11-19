@@ -1,5 +1,6 @@
 # interview_20201119
 Interview code. Demonstrates developer skills on proposed simple task.
+Questions and Answers are in the file `tests/InterviewTest.php`.
 
 ## Installation
 1. Create the database "interview_20201119"

@@ -1,0 +1,32 @@
+{
+  "name": "andrew-svirin/interview_20201119",
+  "version": "dev-develop",
+  "description": "Interview code. Demonstrates developer skills on proposed simple task.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andrew Svirin"
+    }
+  ],
+  "require": {
+    "php": "^7.4",
+    "ext-pgsql": "*"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.29",
+    "phpunit/phpunit": "^8.5|^9",
+    "squizlabs/php_codesniffer": "^3.3",
+    "vlucas/phpdotenv": "^5.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "AndrewSvirin\\Interview\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AndrewSvirin\\Interview\\Tests\\": "tests/",
+      "AndrewSvirin\\Examples\\": "resources/examples"
+    }
+  }
+}

@@ -23,7 +23,7 @@ class OutputBuilder
         return $this;
     }
 
-    public function output(string $glue = null)
+    public function output(string $glue = null): string
     {
         return implode($glue ?? '', $this->elements);
     }

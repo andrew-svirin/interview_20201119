@@ -10,7 +10,7 @@ class CreateFeedbackRequest extends APIRequest
     /**
      * @inheritDoc
      */
-    public function rules()
+    public function rules(): array
     {
         return [
             'gamePlayerSessionId',

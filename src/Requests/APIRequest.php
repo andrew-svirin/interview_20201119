@@ -26,7 +26,7 @@ abstract class APIRequest extends Request
     /**
      * Get validated json data.
      */
-    public function validated()
+    public function validated(): array
     {
         $json = $this->getJson();
         if (method_exists($this, 'rules')) {
@@ -38,5 +38,4 @@ abstract class APIRequest extends Request
 
         return $result;
     }
-
 }

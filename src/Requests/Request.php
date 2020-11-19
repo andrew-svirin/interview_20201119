@@ -29,7 +29,7 @@ abstract class Request
 
     /**
      * Read data from body.
-     * @return array|null
+     * @return string|null
      */
     public function getBody(): ?string
     {

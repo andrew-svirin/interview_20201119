@@ -35,7 +35,7 @@ class APIClient
         [$serviceClass, $method, $responseClass] = $this->router($request);
 
         if (!method_exists($serviceClass, $method)) {
-            throw new LogicException('Service `%s` method `%s` incorrect.', $serviceClass, $method);
+            throw new LogicException(sprintf('Service `%s` method `%s` incorrect.', $serviceClass, $method));
         }
 
         // Here should be used Container with DI.
@@ -66,7 +66,7 @@ class APIClient
                 ];
                 break;
             default:
-                throw new LogicException('Incorrect request `%s`', get_class($request));
+                throw new LogicException(sprintf('Incorrect request `%s`', get_class($request)));
         }
 
         return $result;
